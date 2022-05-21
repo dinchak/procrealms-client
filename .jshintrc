@@ -1,0 +1,27 @@
+{
+  "esversion": 8,
+  "node": true,
+  "browser": false,
+  "bitwise": true,
+  "asi": true,
+  "camelcase": false,
+  "curly": false,
+  "eqeqeq": false,
+  "immed": true,
+  "indent": 2,
+  "latedef": false,
+  "loopfunc": true,
+  "newcap": true,
+  "noarg": true,
+  "quotmark": "any",
+  "regexp": true,
+  "undef": true,
+  "unused": true,
+  "strict": false,
+  "trailing": true,
+  "smarttabs": true,
+  "globals": {
+    "window": true,
+    "document": true
+  }
+}
