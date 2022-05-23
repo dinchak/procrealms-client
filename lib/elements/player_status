@@ -88,7 +88,7 @@ function prerender (component, screen) {
     U.numVisibleChars(roomStatus) - 
     10 - 10 - 10 - 10 - 20
 
-  let out = roomStatus + ' '.repeat(spacer) + hpBar + enBar + stBar + foodBar + xpBar
+  let out = roomStatus + ' '.repeat(Math.max(0, spacer)) + hpBar + enBar + stBar + foodBar + xpBar
 
   component.setContent(U.parseAnsi(out))
 }

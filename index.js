@@ -11,11 +11,11 @@ const App = require('./app');
       const TermJs = require('term.js');
       const Terminal = TermJs.Terminal;
       const term = new Terminal({
-          cols: 80,
-          rows: 24,
+          cols: 1,
+          rows: 1,
           useStyle: true,
           screenKeys: true,
-          // rendererType: 'dom', // Don't use canvas in xterm.
+          rendererType: 'dom', // Don't use canvas in xterm.
       });
 
       term.open(document.getElementById('terminal'));
