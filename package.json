@@ -12,5 +12,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/dinchak/procrealms-client"
+  },
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "uglify-js": "^3.15.5"
   }
 }
