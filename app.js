@@ -26,6 +26,6 @@ function onConnect () {
 
 function onClose () {
   Prefs.remove()
-  UI.setCommandMode()
+  // UI.setCommandMode()
   Conn.init(onConnect, onClose)
 }
