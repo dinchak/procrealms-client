@@ -1,18 +1,33 @@
 {
   "name": "procrealms-client",
-  "main": "index.js",
   "version": "0.1.0",
   "description": "A web/terminal hybrid client for Procedural Realms",
+  "bin": {
+    "procrealms": "./index.js"
+  },
   "dependencies": {
+    "anser": "^2.1.1",
     "blessed": "dinchak/blessed",
     "table": "^6.8.0",
     "term.js": "^0.0.7",
     "ws": "^8.6.0"
   },
+  "keywords": [
+    "game",
+    "cli",
+    "mmorpg",
+    "procgen",
+    "rpg",
+    "mmo",
+    "mud",
+    "multiplayer",
+    "roguelike"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/dinchak/procrealms-client"
   },
+  "homepage": "http://www.proceduralrealms.com",
   "devDependencies": {
     "browserify": "^17.0.0",
     "envify": "^4.1.0",
