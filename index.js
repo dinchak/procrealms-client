@@ -1,4 +1,4 @@
-// browserify this-file.js --ignore-missing -o bundle.js
+#!/usr/bin/env -S NODE_ENV=production node
 'use strict';
 const Blessed = require('blessed');
 const App = require('./app');
@@ -15,7 +15,7 @@ const App = require('./app');
           rows: 1,
           useStyle: true,
           screenKeys: true,
-          rendererType: 'dom', // Don't use canvas in xterm.
+          rendererType: 'canvas', // Don't use canvas in xterm.
       });
 
       term.open(document.getElementById('terminal'));
