@@ -1,22 +1,31 @@
 # procrealms-client
-A character-mode terminal/web hybrid client for [Procedural Realms](http://www.proceduralrealms.com).  See it in action:
+A character-mode terminal/web hybrid client for [Procedural Realms](http://www.proceduralrealms.com).
 
-[http://play.proceduralrealms.com](http://play.proceduralrealms.com)
+```
+npm install -g procrealms-client
+procrealms
+```
+
+See it in action at [http://play.proceduralrealms.com](http://play.proceduralrealms.com)
 
 A few screenshots in the browser:
 
+![Login Page](doc/ss1.png)
 ![Explore](doc/ss3.png)
 ![Battle](doc/ss2.png)
-![Login Page](doc/ss1.png)
 
-# In The Terminal
+# Modifying/Running
+
+To clone this repository and run the code:
 
 ```
+git clone https://github.com/dinchak/procrealms-client
+cd procrealms-client
 npm install
 node index.js
 ```
 
-# In The Browser
+# Browser Builds
 
 Use `browserify` to build for the browser:
 
