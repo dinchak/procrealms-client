@@ -1,6 +1,6 @@
 // browserify this-file.js --ignore-missing -o bundle.js
 'use strict';
-const Blessed = require('blessed');
+const Blessed = require('@dinchak/blessed');
 const App = require('./app');
 
 (async (global) => {

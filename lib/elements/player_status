@@ -1,4 +1,4 @@
-const Blessed = require('blessed')
+const Blessed = require('@dinchak/blessed')
 
 const State = require('../state')
 const U = require('../utils')

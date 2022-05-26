@@ -1,6 +1,5 @@
-#!/usr/bin/env -S NODE_ENV=production node
 'use strict';
-const Blessed = require('blessed');
+const Blessed = require('@dinchak/blessed');
 const App = require('./app');
 
 (async (global) => {
