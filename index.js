@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 'use strict';
 const Blessed = require('@dinchak/blessed');
 const App = require('./app');
