@@ -71,7 +71,25 @@ function prerender (component, screen) {
     player.food,
     player.maxFood,
     10,
+    ['{{W{{2', '{{W{{2', '{{W{{2', '{{W{{2', '{{W{{2'],
+    true
+  )
+
+  let comboBar = U.renderBar(
+    `${player.combo} Combo`,
+    player.combo,
+    100,
+    10,
     ['{{W{{3', '{{W{{3', '{{W{{3', '{{W{{3', '{{W{{3'],
+    true
+  )
+
+  let rageBar = U.renderBar(
+    `${player.rage} Rage`,
+    player.rage,
+    100,
+    10,
+    ['{{W{{1', '{{W{{1', '{{W{{1', '{{W{{1', '{{W{{1'],
     true
   )
 
@@ -86,9 +104,9 @@ function prerender (component, screen) {
 
   let spacer = screen.width -
     U.numVisibleChars(roomStatus) - 
-    10 - 10 - 10 - 10 - 20
+    10 - 10 - 10 - 10 - 10 - 10 - 20
 
-  let out = roomStatus + ' '.repeat(Math.max(0, spacer)) + hpBar + enBar + stBar + foodBar + xpBar
+  let out = roomStatus + ' '.repeat(Math.max(0, spacer)) + hpBar + enBar + stBar + foodBar + comboBar + rageBar + xpBar 
 
   component.setContent(U.parseAnsi(out))
 }
