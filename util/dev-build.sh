@@ -1,1 +1,1 @@
-browserify ../index.js --ignore-missing -o ../www/js/bundle.js
+browserify ../index.js --ignore-missing -t [ envify --NODE_ENV dev ] > ../www/js/bundle.js
