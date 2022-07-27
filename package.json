@@ -1,6 +1,6 @@
 {
   "name": "procrealms-client",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A web/terminal hybrid client for Procedural Realms",
   "bin": {
     "procrealms": "./index.js"
