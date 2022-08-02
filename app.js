@@ -8,7 +8,8 @@ let prefs = Prefs.read()
 
 exports.init = function (program) {
   UI.init(program)
-  Conn.init(onConnect, onClose)
+  UI.showLogin('connecting')
+  Conn.init(onConnect, onClose, onError)
   if (!U.inBrowser()) {
     process.on('uncaughtException', function (err) {
       Log.write(err.stack)
@@ -17,6 +18,7 @@ exports.init = function (program) {
 }
 
 function onConnect () {
+  Conn.attempt = 0
   if (prefs) {
     Conn.send('token', { name: prefs.name, token: prefs.token })
   } else {
@@ -26,6 +28,11 @@ function onConnect () {
 
 function onClose () {
   Prefs.remove()
-  // UI.setCommandMode()
-  Conn.init(onConnect, onClose)
+  UI.showLogin('connectFailed')
+  setTimeout(() => Conn.init(onConnect, onClose, onError), Conn.timeout * 1000)
+}
+
+function onError (err) {
+  UI.showLogin('connectFailed')
+  Log.write(err.stack)
 }

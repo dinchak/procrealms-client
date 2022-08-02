@@ -15,6 +15,26 @@ const App = require('./app');
           rows: 1,
           useStyle: true,
           screenKeys: true,
+          colors: [
+            // dark:
+            '#222222', // black
+            '#aa2222', // red3
+            '#22aa22', // green3
+            '#aaaa22', // yellow3
+            '#2222aa', // blue2
+            '#aa22aa', // magenta3
+            '#22aaaa', // cyan3
+            '#cccccc', // gray90
+            // bright:
+            '#555555', // gray50
+            '#e05555', // red
+            '#55e055', // green
+            '#e0e055', // yellow
+            '#5555e0', // rgb:5c/5c/ff
+            '#e055e0', // magenta
+            '#55e0e0', // cyan
+            '#ffffff'  // white
+          ],
           rendererType: 'canvas', // Don't use canvas in xterm.
       });
 

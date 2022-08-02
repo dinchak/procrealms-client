@@ -4,14 +4,17 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: 4px;
   padding: 0;
+  background-color: #222222;
 }
 
 .terminal {
   font-family: 'DOS', monospace;
   font-size: 20px;
   line-height: 20px;
+  background-color: #222222 !important;
+  border: #222222 solid 5px !important;
 }
 
 @font-face {
