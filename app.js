@@ -1,6 +1,7 @@
 const Conn = require('./lib/conn')
 const Log = require('./lib/log')
 const Prefs = require('./lib/prefs')
+const State = require('./lib/state')
 const U = require('./lib/utils')
 const UI = require('./lib/ui')
 
@@ -29,6 +30,9 @@ function onConnect () {
 function onClose () {
   Prefs.remove()
   UI.showLogin('connectFailed')
+  State.state = {}
+  State.entityCache = {}
+  State.itemCache = {}
   setTimeout(() => Conn.init(onConnect, onClose, onError), Conn.timeout * 1000)
 }
 
