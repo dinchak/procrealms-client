@@ -4,7 +4,7 @@ This document outlines how to connect and interact with Procedural Realms using 
 ## Message Format
 Messages sent and received to/from the server are of the format:
 
-```json
+```javascript
 {
   cmd: 'some.command',
   msg: {
