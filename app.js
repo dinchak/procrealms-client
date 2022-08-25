@@ -28,15 +28,19 @@ function onConnect () {
 }
 
 function onClose () {
+  reconnect()
+}
+
+function onError (err) {
+  Log.write(err.stack)
+  reconnect()
+}
+
+function reconnect () {
   Prefs.remove()
   UI.showLogin('connectFailed')
   State.state = {}
   State.entityCache = {}
   State.itemCache = {}
   setTimeout(() => Conn.init(onConnect, onClose, onError), Conn.timeout * 1000)
-}
-
-function onError (err) {
-  UI.showLogin('connectFailed')
-  Log.write(err.stack)
 }
