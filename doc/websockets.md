@@ -50,7 +50,6 @@ Allows authentication with a name and password.
 * `password` is a string up to 1024 characters
 * `width` is the number of columns on the player's interface (between 10 and 300)
 * `height` is the number of rows on the player's interface (between 10 and 300)
-* `tutorial` is the string `Y` if the user wants to start the tutorial
 
 ### token
 Allows authentication with a name and token.
